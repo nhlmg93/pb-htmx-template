@@ -1,14 +1,12 @@
 {
   "tasks": {
-    "dev": "deno run --watch main.ts"
+    "dev": "deno test -A --watch",
+    "seed": "deno run -A ./scripts/seed.ts"
   },
   "imports": {
+    "@ngneat/falso": "npm:@ngneat/falso@^8.0.2",
     "@std/assert": "jsr:@std/assert@1",
+    "pocketbase": "npm:pocketbase@^0.26.5",
     "puppeteer-core": "npm:puppeteer-core@^24.34.0"
   },
-  "lint": {
-    "rules": {
-      "exclude": ["no-var"]
-    }
-  }
 }

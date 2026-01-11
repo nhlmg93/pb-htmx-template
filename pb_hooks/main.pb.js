@@ -16,11 +16,3 @@ routerAdd("get", "/", (e) => {
 
   return e.html(200, html);
 });
-routerAdd("get", "/workout", (e) => {
-  const html = $template.loadFiles(
-    `${__hooks}/views/layout.html`,
-    `${__hooks}/views/workout.html`,
-  ).render({});
-
-  return e.html(200, html);
-});

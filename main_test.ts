@@ -20,6 +20,5 @@ Deno.test({
   name: "GET /",
   sanitizeResources: false,
   sanitizeOps: false,
-  async fn() {
-  },
+  async fn() {},
 });

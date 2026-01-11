@@ -1,3 +1,3 @@
 
 dev:
-	deno test -A --watch & pocketbase serve
+	deno task dev & pocketbase serve

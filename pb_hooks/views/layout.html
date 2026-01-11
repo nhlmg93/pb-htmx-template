@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <title>Lift Log</title>
+    <title>Pb Htmx Template</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
@@ -13,34 +13,44 @@
       src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.js"
       integrity="sha384-ezjq8118wdwdRMj+nX4bevEi+cDLTbhLAeFF688VK8tPDGeLUe0WoY2MZtSla72F"
       crossorigin="anonymous"
-    ></script>
+    >
+    </script>
     <style>
-      html, body {
+      html,
+      body {
         height: 100%;
       }
+
       body {
         display: flex;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
       }
+
       main {
         width: 100%;
         max-width: 400px;
         padding: 1rem;
       }
+
       article button {
         width: 100%;
         margin-bottom: 0.5rem;
       }
+
       article button:last-child {
         margin-bottom: 0;
       }
     </style>
   </head>
+
   <body>
     <main>
       {{block "body" .}} {{end}}
     </main>
+    <script>
+      console.log("Hello from Layout");
+    </script>
   </body>
 </html>
