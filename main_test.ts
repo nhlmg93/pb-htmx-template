@@ -17,7 +17,7 @@ Deno.test.afterAll(async () => {
 });
 
 Deno.test({
-  name: "GET /",
+  name: "GET /home",
   sanitizeResources: false,
   sanitizeOps: false,
   async fn() {},

@@ -8,7 +8,7 @@ routerAdd("get", "/health", (e) => {
 //  console.log(
 //    `\x1b[90m[DEBUG]\x1b[0m \x1b[36m${msg}\x1b[0m`,
 //  );
-routerAdd("get", "/", (e) => {
+routerAdd("get", "/home", (e) => {
   const html = $template.loadFiles(
     `${__hooks}/views/layout.html`,
     `${__hooks}/views/home.html`,
