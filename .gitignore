@@ -1,4 +1,4 @@
-pb_data/*
-pb_public/dashboard/*
+pb_data/
+pb_public/dashboard/
 .env
 .vite/
