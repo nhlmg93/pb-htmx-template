@@ -9,7 +9,6 @@ Deno.test.beforeAll(async () => {
   browser = await puppeteer.launch({ executablePath: "/usr/bin/chromium" });
   page = await browser.newPage();
   page.on("console", (msg) => console.debug(`PAGE LOG: ${msg.text()}`));
-  await page.goto(BASE_URL);
 });
 
 Deno.test.afterAll(async () => {
@@ -17,8 +16,10 @@ Deno.test.afterAll(async () => {
 });
 
 Deno.test({
-  name: "GET /home",
+  name: "GET /",
   sanitizeResources: false,
   sanitizeOps: false,
-  async fn() {},
+  async fn() {
+    await page.goto(`${BASE_URL}`);
+  },
 });

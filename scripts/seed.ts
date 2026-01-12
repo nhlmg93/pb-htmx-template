@@ -2,11 +2,15 @@ import Pocketbase from "pocketbase";
 
 const pb = new Pocketbase("http://localhost:8090");
 
-import { randEmail, randFullName } from "@ngneat/falso";
+import { randEmail, randFullName, randPost } from "@ngneat/falso";
 
+console.log(
+  Deno.env.get("PB_ADMIN")!,
+  Deno.env.get("PB_ADMIN_PASSWORD")!,
+);
 await pb.collection("_superusers").authWithPassword(
-  "admin@admin.com",
-  "rootrootroot",
+  Deno.env.get("PB_ADMIN")!,
+  Deno.env.get("PB_ADMIN_PASSWORD")!,
 );
 
 console.log("Seeding Users");
@@ -20,3 +24,5 @@ for (let i = 0; i < 5; i++) {
     passwordConfirm: "rootrootroot",
   });
 }
+console.log("Seeding Posts");
+await pb.collection("posts").create({ body: randPost().body });

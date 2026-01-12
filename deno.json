@@ -1,13 +1,21 @@
 {
   "tasks": {
     "dev": "deno test -A --watch",
-    "seed": "deno run -A ./scripts/seed.ts"
+    "dashboard:dev": "deno run -A npm:vite",
+    "build": "deno run -A npm:vite build",
+    "seed": "deno run -A --env-file ./scripts/seed.ts"
+  },
+  "compilerOptions": {
+    "lib": ["deno.ns", "dom", "dom.iterable"]
   },
   "imports": {
+    "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.6",
     "@ngneat/falso": "npm:@ngneat/falso@^8.0.2",
+    "@picocss/pico": "npm:@picocss/pico@^2.1.1",
     "@std/assert": "jsr:@std/assert@1",
     "pocketbase": "npm:pocketbase@^0.26.5",
     "puppeteer-core": "npm:puppeteer-core@^24.34.0",
+    "vanjs-core": "npm:vanjs-core@^1.6.0",
     "vite": "npm:vite@^7.3.1"
   }
 }

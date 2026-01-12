@@ -1,12 +1,35 @@
 {
   "version": "5",
   "specifiers": {
+    "jsr:@std/assert@1": "1.0.16",
+    "jsr:@std/internal@^1.0.12": "1.0.12",
+    "npm:@deno/vite-plugin@^1.0.6": "1.0.6_vite@7.3.1__picomatch@4.0.3",
     "npm:@ngneat/falso@^8.0.2": "8.0.2",
+    "npm:@picocss/pico@^2.1.1": "2.1.1",
     "npm:pocketbase@~0.26.5": "0.26.5",
     "npm:puppeteer-core@^24.34.0": "24.34.0_devtools-protocol@0.0.1534754",
+    "npm:vanjs-core@^1.6.0": "1.6.0",
+    "npm:vite@*": "7.3.1_picomatch@4.0.3",
     "npm:vite@^7.3.1": "7.3.1_picomatch@4.0.3"
   },
+  "jsr": {
+    "@std/assert@1.0.16": {
+      "integrity": "6a7272ed1eaa77defe76e5ff63ca705d9c495077e2d5fd0126d2b53fc5bd6532",
+      "dependencies": [
+        "jsr:@std/internal"
+      ]
+    },
+    "@std/internal@1.0.12": {
+      "integrity": "972a634fd5bc34b242024402972cd5143eac68d8dffaca5eaa4dba30ce17b027"
+    }
+  },
   "npm": {
+    "@deno/vite-plugin@1.0.6_vite@7.3.1__picomatch@4.0.3": {
+      "integrity": "sha512-Sh5XqvFuKAwjARTesi0n6xRpEXm1V0UeqKh+SxIrexCofxOaieNDMqXZD02RiZCg0mrJ43V8eCMuVrDfq6mLmg==",
+      "dependencies": [
+        "vite"
+      ]
+    },
     "@esbuild/aix-ppc64@0.27.2": {
       "integrity": "sha512-GZMB+a0mOMZs4MpDbj8RJp4cw+w1WV5NYD6xzgvzUJ5Ek2jerwfO2eADyI6ExDSUED+1X8aMbegahsJi+8mgpw==",
       "os": ["aix"],
@@ -143,6 +166,9 @@
         "seedrandom",
         "uuid"
       ]
+    },
+    "@picocss/pico@2.1.1": {
+      "integrity": "sha512-kIDugA7Ps4U+2BHxiNHmvgPIQDWPDU4IeU6TNRdvXQM1uZX+FibqDQT2xUOnnO2yq/LUHcwnGlu1hvf4KfXnMg=="
     },
     "@puppeteer/browsers@2.11.0": {
       "integrity": "sha512-n6oQX6mYkG8TRPuPXmbPidkUbsSRalhmaaVAQxvH1IkQy63cwsH+kOjB3e4cpCDHg0aSvsiX9bQ4s2VB6mGWUQ==",
@@ -791,6 +817,9 @@
       "integrity": "sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==",
       "bin": true
     },
+    "vanjs-core@1.6.0": {
+      "integrity": "sha512-4KM9mKEji7woioytMNKQ2XrqD31ykG9vde3N1F/gyJJ0oaOSohdeaN2o4UC4Ndu3Raj1SEXWvW7k4etZI8Ovjw=="
+    },
     "vite@7.3.1_picomatch@4.0.3": {
       "integrity": "sha512-w+N7Hifpc3gRjZ63vYBXA56dvvRlNWRczTdmCBBa+CotUzAPf5b7YMdMR/8CQoeYE5LX3W4wj6RYTgonm1b9DA==",
       "dependencies": [
@@ -855,9 +884,12 @@
   "workspace": {
     "dependencies": [
       "jsr:@std/assert@1",
+      "npm:@deno/vite-plugin@^1.0.6",
       "npm:@ngneat/falso@^8.0.2",
+      "npm:@picocss/pico@^2.1.1",
       "npm:pocketbase@~0.26.5",
       "npm:puppeteer-core@^24.34.0",
+      "npm:vanjs-core@^1.6.0",
       "npm:vite@^7.3.1"
     ]
   }
