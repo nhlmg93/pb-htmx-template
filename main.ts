@@ -12,8 +12,8 @@ const Counter = () => {
 
   (async () => {
     await pb.collection("_superusers").authWithPassword(
-      "admin@admin.com",
-      "rootrootroot",
+      import.meta.env.VITE_PB_ADMIN,
+      import.meta.env.VITE_PB_ADMIN_PASSWORD,
     );
     const result = await pb.collection("posts").getFirstListItem("");
     post.val = result.body;
